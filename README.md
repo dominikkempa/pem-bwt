@@ -9,16 +9,14 @@ pEM-BWT is an implementation of the parallel external-memory
 algorithm to construct Burrows-Wheeler transform from the text
 and its suffix array. The algorithm was described in the paper.
 
-```
-@inproceedings{kk16esa,
-  author =    {Juha K{\"{a}}rkk{\"{a}}inen and Dominik Kempa},
-  title =     {Faster External Memory {LCP} Array Construction},
-  booktitle = {24th Annual European Symposium on Algorithms (ESA 2016)},
-  pages     = {61:1--61:16},
-  year      = {2016},
-  doi       = {10.4230/LIPIcs.ESA.2016.61},
-}
-```
+    @inproceedings{kk16esa,
+      author =    {Juha K{\"{a}}rkk{\"{a}}inen and Dominik Kempa},
+      title =     {Faster External Memory {LCP} Array Construction},
+      booktitle = {24th Annual European Symposium on Algorithms (ESA 2016)},
+      pages     = {61:1--61:16},
+      year      = {2016},
+      doi       = {10.4230/LIPIcs.ESA.2016.61},
+    }
 
 The latest version of pEM-BWT is available from
 https://github.com/dkempa/pem-bwt.
@@ -55,17 +53,17 @@ is located in `/data/input.txt`, the suffix array of `input.txt` is
 located in `/data/input.txt.sa5` and is encoded using 40-bit integers.
 Then, to compute the BWT of `input.txt` using pEM-BWT, type:
 
-```
-$ ./compute_bwt_parallel /data/input.txt
-```
+
+    $ ./compute_bwt_parallel /data/input.txt
+
 
 This will write the output BWT to `/data/input.txt.bwt`. By default,
 the algorithm uses 3.5GiB of RAM and assumes that the input text is
 over byte alphabet. A more advanced usage is demonstrated below.
 
-```
-$ ./compute_bwt_parallel ./input.txt -s ~/data/input.txt.sa -o ../input.txt.bwt -c 4 -i 6 -m 8gi
-```
+
+    $ ./compute_bwt_parallel ./input.txt -s ~/data/input.txt.sa -o ../input.txt.bwt -c 4 -i 6 -m 8gi
+
 
 Explanation:
 - The -s flag allows specifying the location and filename of the
@@ -125,10 +123,10 @@ started. To increase the limits permanently, edit (as a root) the file
 `/etc/security/limits.conf` and add the following lines at the end
 (including the asterisks):
 
-```
-* soft nofile 128000
-* hard nofile 128000
-```
+
+    * soft nofile 128000
+    * hard nofile 128000
+
 
 This increases the limit to 128000 (use larger values if necessary).
 The new limits apply (check with `ulimit -n`) after starting new session.
