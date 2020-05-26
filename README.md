@@ -86,7 +86,7 @@ Explanation:
   8gi = 8 * 2^30 bytes (see the explanation below).
 
 Notes:
-- the symbol in BWT at position corresponding to suffix of the
+- The symbol in BWT at position corresponding to suffix of the
   text starting at position 0 (i.e., position ISA[0]) is 0.
 - The argument of the -m flag (RAM used during the computation)
   can be specified either explicitly or using common suffixes
