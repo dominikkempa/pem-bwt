@@ -242,6 +242,7 @@ int main(int argc, char **argv) {
         break;
       case 'h':
         usage(EXIT_FAILURE);
+        break;
       case 'i':
         int_size = std::atol(optarg);
         if (int_size < 4 || int_size > 8) {
@@ -253,7 +254,7 @@ int main(int argc, char **argv) {
         {
           bool ok = parse_number(optarg, &ram_use);
           if (!ok) {
-            fprintf(stderr, "Error: parsing phrase length "
+            fprintf(stderr, "Error: parsing RAM limit"
                 "limit (%s) failed\n\n", optarg);
             usage(EXIT_FAILURE);
           }
@@ -271,6 +272,7 @@ int main(int argc, char **argv) {
         break;
       default:
         usage(EXIT_FAILURE);
+        break;
     }
   }
 

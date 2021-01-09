@@ -53,7 +53,7 @@ class uint40 {
       low(a & 0xFFFFFFFFL), high((a >> 32) & 0xFF) {}
 
     inline operator uint64_t() const {
-      return (((std::uint64_t)high) << 32) | (std::uint64_t)low;  }
+      return (((std::uint64_t)high) << 32) | (std::uint64_t)low; }
     inline bool operator == (const uint40& b) const {
       return (low == b.low) && (high == b.high); }
     inline bool operator != (const uint40& b) const {
